@@ -43,14 +43,24 @@ public class ListeSimpleTest {
         assertEquals(3, listeATester.getSize());
     }
 
-    @Test
+    // @Test
+    // public void toStringDonneTousLesNoeuds() {
+    //     System.out.println(listeATester);
+    //     listeATester.ajout(1);
+    //     listeATester.ajout(2);
+    //     listeATester.ajout(3);
+    //     System.out.println(listeATester);
+    // }
+     @Test
     public void toStringDonneTousLesNoeuds() {
-        System.out.println(listeATester);
+        assertEquals(listeATester.toString(), "ListeSimple()");
+        
         listeATester.ajout(1);
         listeATester.ajout(2);
         listeATester.ajout(3);
-        System.out.println(listeATester);
+        assertEquals(listeATester.toString(), "ListeSimple(Noeud(3), Noeud(2), Noeud(1))");
     }
+
 
     @Test
     public void modifiePremier() {
