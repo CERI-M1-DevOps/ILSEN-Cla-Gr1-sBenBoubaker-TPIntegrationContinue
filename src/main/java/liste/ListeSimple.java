@@ -8,12 +8,12 @@ public class ListeSimple {
         return size;
     }
 
-    public void ajout(int element) {
+    void ajout(int element) {
         tete = new Noeud(element, tete);
         size++;
     }
 
-    public void modifiePremier(Object element, Object nouvelleValeur) {
+    void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
             courant = courant.getSuivant();
@@ -21,7 +21,7 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
-    public void modifieTous(Object element, Object nouvelleValeur) {
+    void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
             if (courant.getElement() == element)
@@ -43,7 +43,7 @@ public class ListeSimple {
         return sb.toString();
     }
 
-    public void supprimePremier(Object element) {
+    void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
                 tete = tete.getSuivant();
@@ -63,7 +63,7 @@ public class ListeSimple {
         }
     }
 
-    public void supprimeTous(int element) {
+    void supprimeTous(int element) {
        tete = supprimeTousRecurs(element, tete);
     }
 
@@ -94,7 +94,7 @@ public class ListeSimple {
         }
     }
 
-    public void inverser() {
+    void inverser() {
         Noeud precedent = null;
         Noeud courant = tete;
         while (courant != null) {
@@ -117,7 +117,7 @@ public class ListeSimple {
         return precedent;
     }
 
-    public void echanger(Noeud r1, Noeud r2) {
+    void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
             return;
         Noeud precedentR1, precedentR2;
